@@ -10,11 +10,7 @@ string = "Startup's Profit Prediction"
 st.set_page_config(page_title=string, page_icon="✅", layout="centered", initial_sidebar_state="auto", menu_items=None)
 
 st.title (string, anchor=None)
-st.write("""
-
-            - By *Basavaraj* :sunglasses: 
-
-""")
+)
 
 
 from PIL import Image
@@ -62,15 +58,15 @@ st.write('The current number is ', Marketing_cost_Spend)
 
 option = st.sidebar.selectbox(
      'Select the region',
-     ('Delhi', 'Banglore', 'Pune'))
+     ('NewYork', 'Florida', 'California'))
 
 st.write('You selected:', option)
 
-if option == "Pune":
+if option == "NewYork":
     optn = 0
-if option == "Banglore":
+if option == "Florida":
     optn = 1
-if option == "Delhi":
+if option == "California":
     optn = 2   
 
 y_pred = model.predict([[Marketing_cost_Spend,Administration_cost,rnd_cost,optn]])
